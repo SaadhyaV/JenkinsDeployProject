@@ -28,8 +28,10 @@ pipeline{
      
      
      	stage('Deploy'){
-     		echo 'deploy the war project'
-     		bat 'ant deploy'
+     		steps{
+	     		echo 'deploy the war project'
+	     		bat 'ant deploy'
+     		}
      	}
      	
      }
