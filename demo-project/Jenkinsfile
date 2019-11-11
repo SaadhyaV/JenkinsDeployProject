@@ -4,26 +4,30 @@ pipeline{
  	tools{
  		jdk "javaJdk"
  	}
+ 	
  	 stages {
         stage('Build') {
             steps {
-            echo 'Hello user, Here building the code'
-            dir ('demo-project'){
-            	bat 'ant build'
-            }
-        }
+	            echo 'Hello user, Here building the code'
+	            dir ('demo-project'){
+	            	bat 'ant build'
+	            }
+        	}
+     	}
      }
      stages{
      	stage('warfile'){
+     		steps{
      		echo 'War file generating'
-     		dir('demo-project/build/warfile'){
-     			bat 'ant warTarget'
-     		}
+	     		dir('demo-project/build/warfile'){
+	     			bat 'ant warTarget'
+	     		}
+	     	}	
      	}
      }
      stages{
      	stage('Deploy'){
-     	echo 'deploy the war project'
+     		echo 'deploy the war project'
      		bat 'ant deploy'
      	}
      }
