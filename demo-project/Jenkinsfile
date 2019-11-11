@@ -20,7 +20,7 @@ pipeline{
      	stage('warfile'){
      		steps{
      			echo 'War file generating'
-	     		dir('demo-project/build/warfile'){
+	     		dir('demo-project'){
 	     			bat 'ant warTarget'
 	     		}
 	     	}	
