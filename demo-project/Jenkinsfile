@@ -6,6 +6,7 @@ pipeline{
  	}
  	
  	 stages {
+ 	 
         stage('Build') {
             steps {
 	            echo 'Hello user, Here building the code'
@@ -14,21 +15,22 @@ pipeline{
 	            }
         	}
      	}
-     }
-     stages{
+     
+     
      	stage('warfile'){
      		steps{
-     		echo 'War file generating'
+     			echo 'War file generating'
 	     		dir('demo-project/build/warfile'){
 	     			bat 'ant warTarget'
 	     		}
 	     	}	
      	}
-     }
-     stages{
+     
+     
      	stage('Deploy'){
      		echo 'deploy the war project'
      		bat 'ant deploy'
      	}
+     	
      }
 }
