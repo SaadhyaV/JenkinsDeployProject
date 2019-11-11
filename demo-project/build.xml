@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="warTarget" name="demo-project">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="C:/Users/Lenovo/Downloads/eclipse-jee-oxygen-3a-win32-x86_64/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+	<property name="tomcat" value="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24"></property>
+		
+	<path id="tomcat.class.path">
+			<fileset dir="${tomcat}/lib">
+				<include name="**/*.jar"></include>
+				<include name="**/*.zip" />
+			</fileset>
+		<pathelement location="${tomcat}/bin/bootstrap.jar"/>
+		<pathelement location="${tomcat}/bin/tomcat-juli.jar" />	
+	</path>
+	
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Apache Tomcat v9.0 [Apache Tomcat v9.0].libraryclasspath">
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/annotations-api.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/catalina-ant.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/catalina-ha.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/catalina-storeconfig.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/catalina-tribes.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/catalina.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/ecj-4.12.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/el-api.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/jasper-el.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/jasper.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/jaspic-api.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/jsp-api.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/servlet-api.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-api.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-coyote.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-dbcp.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-cs.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-de.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-ko.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-pt-BR.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-ru.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-i18n-zh-CN.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-jdbc.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-jni.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-util-scan.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-util.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/tomcat-websocket.jar"/>
+        <pathelement location="C:/Apache Software Foundation/Tomcat 9.0_Tomcat9.24/lib/websocket-api.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/lib/commons-fileupload-1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-io-2.6.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-lang-2.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/freemarker-2.3.28.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/javax.ejb-3.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/log4j-api-2.12.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/ognl-3.1.21.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/struts2-core-2.5.20.jar"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="struts2.userclasspath"/>
+    <path id="demo-project.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="Apache Tomcat v9.0 [Apache Tomcat v9.0].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="struts2.userclasspath"/>
+    </path>
+    <target name="init" depends="clean">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="demo-project.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+	
+	<target name="warTarget" depends="build-project">
+		<mkdir dir="build/warfile"/>
+		<war destfile="build/warfile/demoProject.war" needxmlfile="false" basedir="build/classes"></war>		
+		<antcall target="deploy"></antcall>
+	</target>
+	
+	<target name="deploy">
+		<sequential>
+			<antcall target="tomcat-stop"></antcall>
+			<echo>Deploy to the server</echo>
+			<copy file="build/warfile/demoProject.war" todir="${tomcat}/webapps"></copy>
+			<antcall target="tomcat-start"></antcall>
+		</sequential>
+	</target>
+	
+		<target name="tomcat-start" description="Start tomcat" >
+			<echo>Stop Tomcat</echo>
+			<java classname="org.apache.catalina.startup.Bootstrap" fork="true" classpathref="tomcat.class.path">
+				<jvmarg value="-Dcatalina.home=${tomcat}"/>
+			</java>
+		</target>
+		
+		<target name="tomcat-stop" depends="tomcat-check-status" if="tomcat.started">
+			<echo>Start Tomcat</echo>
+			<java classname="org.apache.catalina.startup.Bootstrap" fork="true" classpathref="tomcat.class.path">
+				<jvmarg value="-Dcatalina.home=${tomcat}"/>
+				<arg line="stop"/>
+			</java>
+			<sleep seconds="5"/>
+		</target>
+		
+		<target name="tomcat-check-status">
+			<condition property="tomcat.started">
+				<socket server="localhost" port="8085"/>
+			</condition>
+		</target>
+</project>
