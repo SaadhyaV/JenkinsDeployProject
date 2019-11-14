@@ -123,7 +123,7 @@
 			<antcall target="tomcat-stop"></antcall>
 			<echo>Deploy to the server</echo>
 			<copy file="build/warfile/demoProject.war" todir="${tomcat}/webapps"></copy>
-			<antcall target="tomcat-start"></antcall>
+     <!--			<antcall target="tomcat-start"></antcall>-->
 		</sequential>
 	</target>
 	
