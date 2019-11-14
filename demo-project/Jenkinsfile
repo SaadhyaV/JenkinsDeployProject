@@ -30,7 +30,9 @@ pipeline{
      	stage('Deploy'){
      		steps{
 	     		echo 'deploy the war project'
-	     		bat 'ant deploy'
+	     		dir('demo-project'){
+	     			bat 'ant deploy'
+	     		}
      		}
      	}
      	
